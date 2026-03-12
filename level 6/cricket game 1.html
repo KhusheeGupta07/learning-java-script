@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+    body { text-align: center;}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button onclick="alert('You have choosen Bat')
+    console.log('You have choosen Bat')
+    generatecomputerchoice();
+
+    let resultmsg;
+    if(computerchoice === 'Ball'){
+      //  console.log('User won');
+      resultmsg = 'User won';
+    }
+    else if(computerchoice === 'Stump'){
+       // console.log('computer won');
+       resultmsg = 'computer won';
+    }
+     else if(computerchoice === 'Bat'){
+      //  console.log(` it's a tie`);
+      resultmsg = ` it's a tie`;
+    }
+
+    alert(`You have choosen Bat.computer choice is ${computerchoice}. ${resultmsg}`)
+    ">Bat</button>
+
+
+ <button onclick="alert('You have choosen Ball')
+     console.log('You have choosen Ball')
+     generatecomputerchoice();
+
+        if(computerchoice === 'Stump'){
+      //  console.log('User won');
+      resultmsg = 'User won';
+    }
+    else if(computerchoice === 'Bat'){
+      //  console.log('computer won');
+      resultmsg = 'computer won';
+    }
+     else if(computerchoice === 'Ball'){
+       // console.log(` it's a tie`);
+       resultmsg = ` it's a tie`;
+    
+    }
+    
+    alert(`You have choosen Ball.computer choice is ${computerchoice}. ${resultmsg}`)
+    ">Ball</button>
+
+
+      <button onclick="alert('You have choosen stump')
+      console.log('You have choosen stump')
+      generatecomputerchoice();
+    
+    if(computerchoice === 'Bat'){
+       // console.log('User won');
+       resultmsg = 'User won';
+    }
+    else if(computerchoice === 'Ball'){
+       // console.log('computer won');
+       resultmsg = 'computer won';
+    }
+     else if(computerchoice === 'Stump'){
+       // console.log(` it's a tie`);
+       resultmsg = ` it's a tie`;
+    }
+    
+    alert(`You have choosen Stump.computer choice is ${computerchoice}. ${resultmsg}`)
+    ">Stump</button>
+
+
+    <script>
+     let computerchoice;                          //HERE COMPUTERCHOICE DEFINES GLOBALY  AS IT IS ALSO USED IN UPER WAALE ELSE IF
+        function generatecomputerchoice() {
+  let number = Math.random() * 3;
+
+    if(number>0 && number<=1){
+         computerchoice = 'Ball';
+    }
+       else if(number>1 && number<=2){
+           computerchoice ='Stump'; 
+         }
+        else{
+               computerchoice ='Bat';
+    } }
+    </script>
+</body>
+</html>
