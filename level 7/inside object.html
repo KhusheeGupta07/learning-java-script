@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product = {
+            company: 'apple',
+            price: '864',
+            'item-name': 'shirt',
+             rating:{
+                stars: 4.5,
+                noOfREviews: 87
+             },
+             displayPrice: function(){
+                console.log(`Price of the Product is ${product.price}`)
+                //console.log(`Price of the Product is ${this.price}`)
+             }
+        };
+        product.displayPrice();
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+    body { text-align: center;}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+ <button onclick="alert('You have choosen Bat')
+    console.log('You have choosen Bat')
+    generatecomputerchoice();
+    let resultmsg = getResult('Bat',computerchoice);
+   // alert(`You have choosen Bat.computer choice is ${computerchoice}. ${resultmsg}`)
+     alertmsg('Bat',computerchoice,resultmsg);
+    ">Bat</button>
+
+
+<button onclick="alert('You have choosen Ball')
+     console.log('You have choosen Ball')
+     generatecomputerchoice();
+     resultmsg = getResult('Ball',computerchoice);
+    
+  //  alert(`You have choosen Ball.computer choice is ${computerchoice}. ${resultmsg}`)
+    alertmsg('Ball',computerchoice,resultmsg);
+   ">Ball</button>
+
+
+<button onclick="alert('You have choosen stump')
+      console.log('You have choosen stump')
+      generatecomputerchoice();
+      resultmsg = getResult('Stump',computerchoice);
+    
+  //  alert(`You have choosen Stump.computer choice is ${computerchoice}. ${resultmsg}`)
+   alertmsg('Stump',computerchoice,resultmsg);
+   ">Stump</button>
+
+
+    <script>
+let score = {
+win: 0,
+lose: 0,
+tie: 0,
+};
+
+
+
+ let computerchoice;                          //HERE COMPUTERCHOICE DEFINES GLOBALY  AS IT IS ALSO USED IN UPER WAALE ELSE IF
+ function generatecomputerchoice() {
+  let number = Math.random() * 3;
+         if(number>0 && number<=1){
+         computerchoice = 'Ball';
+          }
+        else if(number>1 && number<=2){
+           computerchoice ='Stump'; 
+         }
+         else{
+               computerchoice ='Bat';
+         } }
+
+
+function getResult(userMove,computerMove){
+if(userMove === 'Bat'){
+        if(computerMove === 'Ball'){
+           //  console.log('User won');
+           score.win ++;
+           return 'User won';
+            }
+             else if(computerMove === 'Stump'){
+       // console.log('computer won');
+              score.lose ++;
+       return 'computer won';
+               }
+              else if(computerMove === 'Bat'){
+               //  console.log(` it's a tie`);
+                score.tie ++;
+               return `it's a tie`;
+                 }}
+
+
+  else if(userMove === 'Ball'){
+        if(computerMove === 'Stump'){
+        //  console.log('User won');
+         score.win ++;
+        return 'User won';
+        }
+        else if(computerMove === 'Bat'){
+        //  console.log('computer won');
+         score.lose ++;
+        return 'computer won';
+        }
+         else if(computerMove === 'Ball'){
+        // console.log(` it's a tie`);
+        score.tie ++;
+         return `it's a tie`;}}
+  
+
+ else{if(computerMove === 'Bat'){
+       // console.log('User won');
+        score.win ++;
+        return 'User won';
+        }
+        else if(computerMove === 'Ball'){
+       // console.log('computer won');
+        score.lose ++;
+        return 'computer won';
+         }
+        else if(computerMove === 'Stump'){
+       // console.log(` it's a tie`);
+       score.tie ++;
+        return `it's a tie`;
+    }}
+}
+
+function alertmsg(userMove,computerMove,resultmsg){
+  console.log(score);
+  alert(`You have choosen ${userMove}.computer choice is ${computerchoice}. ${resultmsg}
+  Wom:${score.win},,Lose:${score.lose}..Tie:${score.tie}`)
+}
+    </script>
+</body>
+</html>
