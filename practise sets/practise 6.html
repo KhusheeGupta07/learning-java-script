@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ function checkingNumStatus(a){
+            let num =a;                                      //CHECKING EVEN OR ODD
+            if(num%2== 0) { 
+                return 'even';}
+         else{
+            return 'odd';  }}
+                 console.log( checkingNumStatus(40));
+                 console.log( checkingNumStatus(31));
+
+function isLarge(n1,n2){
+    if(n1>n2){  return n1;  }                                     // CHECKING LARGER ONE
+     else { return n2;} 
+    // return n1>n2 ? n1 :n2;                    USING TERNARY  OPERATORY
+    }     
+                    console.log(isLarge(1,5)) ;
+                   console.log(isLarge(15,5)); 
+                   console.log(isLarge(2,2));
+
+function toFahrenheit(celciusvalue){                              // CONVERTING CELCIUS TO FAHRENHEIT
+    return 9/5*celciusvalue + 32;
+}
+             console.log(toFahrenheit(30));
+             console.log(toFahrenheit(0));
+             console.log(toFahrenheit(100));
+    </script>
+</body>
+</html>
