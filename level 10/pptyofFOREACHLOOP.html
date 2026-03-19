@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5,6,7,8,9];
+//  function search (ary,num){
+//     for(let  i = 0;i<arr.length ; i++){
+// if(ary[i] === num){
+//   console.log(`element position is: ${i}`);
+//   return;
+// }
+// }
+// console.log('Element was not found');}
+// search(ary,5);
+
+
+arr.forEach(num =>{
+    if(num === 5){
+       return;
+    }
+    console.log(`visited:${num}`);
+})
+    </script>
+</body>
+</html>
