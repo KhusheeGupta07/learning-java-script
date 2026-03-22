@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+let product1 = {
+    name: 't-shirt',
+    compny:'gucci',
+    size: 's',
+    fit: 'slim fit',
+}; 
+
+let product2 = {
+      name: 't-shirt',
+    compny:'gucci',
+    size: 'm',
+    fit: 'slim fit',}; 
+
+// let product3 = {
+//       name: 't-shirt',
+//     compny:'gucci',
+//     size: 's',
+//     fit: 'slim fit',
+// }; 
+function isIdenticalProduct(product1,product2){
+    if(product1 == product2){                   //REFERENCE CHECKED SAME OR NOT
+        return true;
+    }
+    if(typeof product1 !== 'object'  || typeof product2 !== 'object'){
+      console.warn('parameter passed was not an object') ;
+      return false; 
+    }
+
+    if(product1.name === product2.name &&
+     product1.compny === product2.compny && 
+     product1.size === product2.size && 
+     product1.fit === product2.fit
+     ){
+        return  true;
+     }
+     else{
+        return false;
+     }
+ }     
+
+ let product3 = {
+      name: 't-shirt',
+    compny:'gucci',
+    size: 'm',
+    fit: 'slim fit',}; 
+      console.log(isIdenticalProduct(product1 , ''));
+       console.log(isIdenticalProduct(product1, product1));
+         console.log(isIdenticalProduct(product1 , product2)); 
+        console.log(isIdenticalProduct(product3 , product2));
+         console.log(isIdenticalProduct(product2 , product3));
+</script>
+    
+</body>
+</html>
