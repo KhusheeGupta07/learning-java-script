@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #firstbtn{
+            background-color: aqua;
+        }
+        .even{
+            background-color: deeppink;
+        }
+        .odd{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <button  id ="firstbtn"  
+     onclick="evenOddcolour();
+    //   document.querySelector('#btn').innerText = `button is clicked ${clck} times`;
+     ">click - me</button> 
+
+     <h2  id ="btn"></h2>
+
+   <script>
+    let text = document.querySelector('#btn');
+let variable = document.querySelector('#firstbtn');
+let clck = Number(localStorage.getItem('clck'))  || 0  ;
+// document.querySelector('#btn').innerText = clck;
+updateUI();
+function evenOddcolour(){ clck += 1;
+    localStorage.setItem('clck',clck);
+     updateUI();
+ 
+}
+
+
+function updateUI(){
+text.innerText = `button is clicked ${clck} times`;
+
+    if(clck%2 == 0){
+    variable.style.backgroundColor = "orange";
+    // ddd.style.backgroundColor = "green";
+    }      
+    else{
+    variable.style.backgroundColor = "green";
+    // ddd.style.backgroundColor = "orange";
+    }
+}
+//   clck += 1; 
+//      document.querySelector('#btn').innerText = `button is clicked ${clck} times`;
+
+ </script> 
+</body>
+</html>

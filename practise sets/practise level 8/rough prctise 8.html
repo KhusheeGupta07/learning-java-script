@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="my-button"  onclick="buttonpresed();">0</button>
+    
+    <script>
+  let noclck = localStorage.getItem('noclck')||0;
+  let button = document.querySelector('#my-button');
+   button.innerText = noclck; 
+
+
+  function buttonpresed(){
+                  noclck ++;
+                  localStorage.setItem('noclck',noclck);
+                  button.innerText = noclck;  }
+    </script>
+</body>
+</html>

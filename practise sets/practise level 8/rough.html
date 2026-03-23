@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button id="firstbtn" onclick="evenOddcolour()">click - me</button>
+<h2 id="btn"></h2>
+   <script>
+        let clck = 0;
+
+function evenOddcolour(){
+
+  clck++;
+
+  let button = document.querySelector('#firstbtn');
+  let text = document.querySelector('#btn');
+
+  text.innerText = `button is clicked ${clck} times`;
+
+  if(clck % 2 === 0){
+    button.classList.remove('odd');
+    button.classList.add('even');
+  }
+  else{
+    button.classList.remove('even');
+    button.classList.add('odd');
+  }
+}
+
+document.querySelector('#btn').innerText = `button is clicked ${clck} times`;
+   
+//    let clck = 0;
+
+// function evenOddcolour(){
+
+//   clck++;
+
+//   let button = document.querySelector('#firstbtn');
+//   let text = document.querySelector('#btn');
+
+//   text.innerText = `button is clicked ${clck} times`;
+
+//   if(clck % 2 === 1){   // odd
+//     button.style.backgroundColor = "chartreuse";
+//   }
+//   else{                 // even
+//     button.style.backgroundColor = "deeppink";
+//   }
+// } 
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="greeting"></h2>
+
+<script>
+        let myDate = new Date();
+        let time = myDate.getHours();
+        // let name = radha;
+        let greet;
+console.log(myDate.getHours());
+          if(time<12){
+          greet = 'good morning'; }
+          else if(time>=12 && time<19 ){
+         greet = 'good evening';}
+          else{
+         greet = 'good night'; }
+
+ console.log(greet);
+
+function dogreeting(name = 'dear' ){
+document.querySelector('#greeting').innerText = `${greet}   ${name}`;}
+dogreeting('radhe');
+
+ </script>
+</body>
+</html>
