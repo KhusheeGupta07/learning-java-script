@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+    .btn{
+        font-size: 15px;
+        height: 20px;
+        width: 90px;
+        background-color: red;
+        color: beige;
+        border: none;
+        border-radius: 5px;
+    }
+    .NewClass {
+      font-size: 30px;
+        height: 40px;
+        width: 180px;  }
+</style>
+</head>
+<body>
+     <button class="btn" >Subscribe</button>
+    <script>
+let buttOneleMEnt = document.querySelector('.btn');
+buttOneleMEnt.addEventListener('click',event =>{setTimeout(DoubleSize(),4000)});
+
+function DoubleSize(){
+    let buttOneleMEnt = document.querySelector('.btn');
+    buttOneleMEnt.classList.add('NewClass');
+};
+// working.classList.add('NewClass');}
+
+    </script>
+</body>
+</html>
